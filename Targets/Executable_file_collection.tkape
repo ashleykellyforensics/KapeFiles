@@ -1,0 +1,38 @@
+Description: Collect executables to be scanned and hashed with densityscout.
+###Use this target in conjuction with densityscout module to collecet executables from notebale path, create sha1 hash of those files, and apply densityscout against the file.###
+Author:  Ashley Kelly  
+Version: 1
+Id: 59497940-3545-4e1a-b775-78684fc31d7a
+RecreateDirectories: false
+Targets:
+    -
+        Name: Executables_collection
+        Category: Misc
+        Path: C:\Windows\system32\
+        FileMask: '*.dll'
+    -
+        Name: Executables_collection
+        Category: Misc
+        Path: C:\Windows\system32\
+        FileMask: '*.exe'
+    -
+        Name: Executables_collection
+        Category: Misc
+        Path: C:\Windows\System32\
+        FileMask: '*.sys'
+    -
+        Name: Executables_collection
+        Category: Executable
+        Path: C:\Windows\SysWOW64\
+        FileMask: '*.dll'
+    -
+        Name: Executables_collection
+        Category: Executable
+        Path: C:\Windows\SysWOW64\
+        FileMask: '*.sys'
+    -
+        Name: Executables_collection
+        Category: Executable
+        Path: C:\Windows\SysWOW64\
+        FileMask: '*.exe'
+    
